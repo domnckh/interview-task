@@ -1,0 +1,117 @@
+
+#app {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: $second-color;
+  margin-top: 60px;
+  max-width: 288px;
+  margin: auto;
+  
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+input {
+  outline: none;
+}
+
+
+ul {
+  margin: 0 0 30px;
+  padding: 0;
+  
+  li {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    margin-bottom: 15px;
+    padding: 14px 7px;
+    @include boxBorderShadow();
+    
+    input {
+      float: left;
+    }
+    
+    span {
+      margin-left: 10px;
+      line-height: 22px;
+    }
+    
+    label {
+      display: block;
+      width: 100%;
+      outline: none;
+      
+      input {
+        outline: none;
+      }
+      
+      &:hover {
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    
+    .close {
+      cursor: pointer;
+      text-decoration: none;
+      margin-left: 0;
+      -ms-flex: 0 0 26px;
+      flex: 0 0 26px;
+      max-width: 26px;
+      display: flex;
+      justify-content: flex-end;
+      
+      &::before {
+        content: "";
+        display: block;
+        background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512" viewBox="0 0 413.348 413.348" width="512"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"/></svg>');
+        -webkit-background-size: contain;
+        background-size: contain;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        width: 12px;
+        height: 12px;
+        height: 100%;
+      }
+    }
+  }
+}
+
+
+input[type=checkbox] {
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  padding: 0;
+  -webkit-appearance: none;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 482.239 482.239" height="512" viewBox="0 0 482.239 482.239" width="512"><path d="m465.016 0h-447.793c-9.52 0-17.223 7.703-17.223 17.223v447.793c0 9.52 7.703 17.223 17.223 17.223h447.793c9.52 0 17.223-7.703 17.223-17.223v-447.793c0-9.52-7.703-17.223-17.223-17.223zm-17.223 447.793h-413.347v-413.347h413.348v413.347z"/></svg>');
+  background-size: contain;
+  
+  &:checked {
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 482.239 482.239" height="512" viewBox="0 0 482.239 482.239" width="512"><path d="m465.016 0h-447.793c-9.52 0-17.223 7.703-17.223 17.223v447.793c0 9.52 7.703 17.223 17.223 17.223h447.793c9.52 0 17.223-7.703 17.223-17.223v-447.793c0-9.52-7.703-17.223-17.223-17.223zm-17.223 447.793h-413.347v-413.347h413.348v413.347z"/><path d="m373.856 184.405-24.354-24.354-142.828 142.828-73.937-73.937-24.354 24.354 98.291 98.291z"/></svg>');
+    opacity: $opacity;
+  }
+}
+
+.finished span {
+  text-decoration: line-through;
+}
+
+.finished .close {
+  opacity: $opacity;
+}
+
+.title {
+  font-weight: bold;
+  color: $first-color;
+  margin: 0 0 15px;
+  text-align: left;
+}
