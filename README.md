@@ -44,3 +44,14 @@ npm install
 ```
 npm run serve
 ```
+#Project build
+
+### 1.) Build project
+```
+npm run build
+```
+
+### optional: run build locally
+```
+npm run serveProd
+```
